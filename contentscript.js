@@ -2,8 +2,8 @@ document.addEventListener("keydown",function(event){
 	
 	if(event.key == "Backspace"){
 		var focusObj = document.activeElement;
-	
-		if( (focusObj instanceof HTMLInputElement) && (focusObj.type ="text") ){
+		
+		if( focusObj instanceof HTMLInputElement ){
 			return;
 		}
 		
