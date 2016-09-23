@@ -1,6 +1,6 @@
 ﻿{
   "name" : "BackSpace",
-  "version" : "1.0.3",
+  "version" : "1.0.4",
   "manifest_version": 2,
   "author": "EricLin",
   "description" : "push backspace button to return previous page.",
