@@ -1,10 +1,16 @@
+var input_types = ["text","password","number","search","url","email","tel","date","month","week","time","datetime-local"];
+
 document.addEventListener("keydown",function(event){
-	console.log(event.key);
+	
 	if(event.key == "Backspace"){
 		var focusObj = document.activeElement;
-		console.log(focusObj);
-		if( (focusObj instanceof HTMLInputElement) && (focusObj.type == "number" || focusObj.type == "text" || focusObj.type == "password" || focusObj.type == "search" || focusObj.type == "email" || focusObj.type == "tel" || focusObj.type == "url") ){
-			return;
+		
+		if(focusObj instanceof HTMLInputElement){
+			for(var i = 0;i<input_types.length ;i++){
+				if(focusObj.type == input_types[i]){
+					return;
+				}
+			}
 		}
 		
 		var cursor = window.getComputedStyle(focusObj, null).getPropertyValue("cursor");
